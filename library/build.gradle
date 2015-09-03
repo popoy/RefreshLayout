@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    compile 'com.android.support:support-v4:22.1.+'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            name = 'mavenCentralReleaseDeployer'
+            repository(url: "http://121.40.170.53:8081/nexus/content/repositories/releases") {
+                authentication(userName: "admin", password: "mason")
+            }
+            snapshotRepository(url: "http://121.40.170.53:8081/nexus/content/repositories/snapshots") {
+                authentication(userName: "admin", password: "mason")
+            }
+            pom.version = "1.0.22-SNAPSHOT"
+            pom.artifactId = "refreshlayout"
+            pom.groupId = "com.mason"
+            pom.name = "refreshlayout"
+            pom.packaging = 'aar'
+        }
+    }
+}
