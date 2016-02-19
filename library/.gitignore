@@ -1,1 +1,16 @@
-/build
+/bin
+/gen
+*.apk
+*.ap_
+*.dex
+*.class
+.gradle/
+build/
+/build/
+proguard/
+*.log
+.idea/
+.project
+*.iml
+local.properties
+/project.properties
