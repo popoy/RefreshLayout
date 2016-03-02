@@ -54,7 +54,7 @@ import android.widget.ScrollView;
  */
 @SuppressLint("ClickableViewAccessibility")
 public class SuperSwipeRefreshLayout extends ViewGroup {
-    private static final String LOG_TAG = "CustomeSwipeRefreshLayout";
+    private static final String LOG_TAG = "SuperSwipeRefreshLayout";
     private static final int HEADER_VIEW_HEIGHT = 50;// HeaderView height (dp)
 
     private static final float DECELERATE_INTERPOLATION_FACTOR = 2f;
@@ -1450,4 +1450,11 @@ public class SuperSwipeRefreshLayout extends ViewGroup {
 
     }
 
+    public int getmFooterViewHeight() {
+        return mFooterViewHeight;
+    }
+
+    public void setmFooterViewHeight(int mFooterViewHeight) {
+        this.mFooterViewHeight = mFooterViewHeight;
+    }
 }
