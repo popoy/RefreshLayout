@@ -30,7 +30,7 @@ uploadArchives {
             snapshotRepository(url: "http://121.40.170.53:8081/nexus/content/repositories/snapshots") {
                 authentication(userName: "admin", password: "mason")
             }
-            pom.version = "1.0.3-SNAPSHOT"
+            pom.version = "1.0.4-SNAPSHOT"
             pom.artifactId = "refreshlayout"
             pom.groupId = "com.am"
             pom.name = "refreshlayout"

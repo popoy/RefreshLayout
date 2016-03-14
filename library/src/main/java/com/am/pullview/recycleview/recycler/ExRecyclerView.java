@@ -130,7 +130,7 @@ public class ExRecyclerView extends RecyclerView {
     /**
      * 设置item的点击事件
      */
-    private static AdapterView.OnItemClickListener mOnItemClickListener = null;
+    private AdapterView.OnItemClickListener mOnItemClickListener = null;
 
     public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
         mOnItemClickListener = listener;
@@ -139,7 +139,7 @@ public class ExRecyclerView extends RecyclerView {
     /**
      * 设置item的长按事件
      */
-    public static AdapterView.OnItemLongClickListener mOnItemLongClickListener = null;
+    public AdapterView.OnItemLongClickListener mOnItemLongClickListener = null;
 
     public void setOnItemLongClickListener(AdapterView.OnItemLongClickListener listener) {
         mOnItemLongClickListener = listener;
